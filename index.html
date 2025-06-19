@@ -175,27 +175,72 @@
 
 /* ONLY-PARAGRAPH */
 
-
-
-    .second-container {
+ .second-container {
+      max-width: 1000px;
+      margin: 0 auto;
       padding: 60px 20px;
       text-align: center;
     }
 
-    .first-para {
-      font-size: 35px;
-      color: rgba(0, 0, 0, 0.8);
+    .heading-main {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+      line-height: 1.4;
     }
 
-    .second-para,
-    .third-para {
-      font-size: 20px;
-      margin-top: 15px;
-      color: rgba(0, 0, 0, 0.7);
+    
+
+    .main-para {
+      font-size: 18px;
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      line-height: 1.7;
     }
 
+    .highlight-para {
+      font-size: 16px;
+      color: #679267;
+      font-weight: bold;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
 
+    /* Responsive */
+    @media (max-width: 768px) {
+      .heading-main {
+        font-size: 24px;
+      }
 
+      
+      .main-para {
+        font-size: 16px;
+        padding: 0 10px;
+      }
+
+      .highlight-para {
+        font-size: 15px;
+        padding: 0 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .heading-main {
+        font-size: 20px;
+      }
+
+     
+
+      .main-para {
+        font-size: 15px;
+      }
+
+      .highlight-para {
+        font-size: 14px;
+      }
+    }
 /* images with paragraphs */
 
 
@@ -281,11 +326,7 @@
       
     }
 
-
-    /* Gallery */
-
-
-        .Gallery-head {
+.Gallery-head {
       text-align: center;
       font-size: 36px;
       color: #679267;
@@ -294,8 +335,13 @@
 
     .fourth-container {
       display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      max-width: 1240px;
+      margin: auto;
+      padding: 0 40px;
       flex-wrap: wrap;
-      gap: 20px;
     }
 
     .gallery-img2 img,
@@ -306,25 +352,25 @@
       height: 100%;
       object-fit: cover;
       border-radius: 10px;
+      display: block;
     }
 
     .gallery-img2 {
-      flex: 1;
+      width: 35%;
       min-width: 300px;
-      max-width: 600px;
-      height: 600px;
+      height: 700px;
     }
 
     .gallery-right {
-      flex: 1;
+      width: 62%;
+      min-width: 300px;
       display: flex;
       flex-direction: column;
       gap: 20px;
-      min-width: 300px;
     }
 
     .gallery-img3 {
-      height: 300px;
+      height: 380px;
     }
 
     .fifth-container {
@@ -338,28 +384,28 @@
       flex: 1;
     }
 
-    @media (max-width: 768px) {
+    /* Mobile Responsive Design */
+    @media (max-width: 900px) {
       .fourth-container {
         flex-direction: column;
         align-items: center;
+        padding: 0 20px;
       }
 
       .gallery-img2,
+      .gallery-right,
       .gallery-img3,
       .gallery-img4,
       .gallery-img5 {
-        width: 90%;
+        width: 100%;
+        max-width: 90vw;
         height: auto;
-        max-width: 500px;
       }
 
-      .gallery-right,
       .fifth-container {
-        width: 100%;
         flex-direction: column;
-        align-items: center;
-        height: auto;
         gap: 20px;
+        height: auto;
       }
 
       .Gallery-head {
@@ -368,50 +414,6 @@
       }
     }
 
-
-
-
-
-
-
-
-
-
-      
-
- 
-      
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   </style>
 </head>
 <body>
@@ -446,9 +448,15 @@
 
   <!-- Hero Section Info -->
   <div class="second-container">
-    <p class="first-para">POWER OF IMPRESSIONS GUARANTEED<br><span class="words">FEEL EXTREMELY</span></p>
-    <p class="second-para">Curabitur sit amet purus semper tortor tempor lacinia eu in tortor.</p>
-    <p class="third-para">Curabitur sit amet purus semper Tortor Tempor</p>
+    <p class="heading-main">POWER OF IMPRESSIONS GUARANTEED <br>FEEL EXTREMELY</p>
+   
+
+    <p class="main-para">
+      Curabitur sit amet purus semper tortor tempor lacinia eu in tortor. Integer nisl risus, condimentum sed lacinia in, tincidunt eget mi. Praesent finibus mollis blandit. Suspendisse vulputate turpis et erat iaculis viverra.
+    </p>
+    <p class="highlight-para">
+      Curabitur sit amet purus semper Tortor Tempor
+    </p>
   </div>
 
   <!-- Structure for Mobile: img > para > img > para -->
