@@ -154,6 +154,14 @@
       cursor: pointer;
     }
 
+    .galllery-img11 img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
     .paragraph1 {
       max-width: 500px;
     }
@@ -217,6 +225,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 10px;
     }
 
     .gallery-right {
@@ -320,26 +329,19 @@
 
       .galllery-img1 img {
         width: 100%;
-        max-width: 100%;
+        max-width: 80%;
+      }
+
+       .galllery-img2 img {
+        width: 100%;
+        max-width: 97%;
       }
 
       
 
       /* === REORDERING STRUCTURE === */
       
-      .gallery-img2,
-      .gallery-right,
-      .gallery-img4 img,
-      .gallery-img5 img,
-      .gallery-img3 img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .fifth-container {
-        flex-direction: column;
-      }
-
+      
       .last-container {
         flex-direction: column;
         text-align: center;
@@ -349,6 +351,13 @@
         font-size: 18px;
       }
     }
+
+
+
+
+
+
+    
   </style>
 </head>
 <body>
@@ -401,7 +410,7 @@
   </div>
 
   <div class="section section-reverse">
-    <div class="galllery-img1">
+    <div class="galllery-img11">
       <img src="offroad.webp" alt="offroad">
     </div>
     <div class="paragraph1">
@@ -411,12 +420,13 @@
     </div>
   </div>
 
-  <!-- Gallery -->
-  <h1 class="Gallery-head" style="padding: 50px 20px;">GALLERY</h1>
+ <h1 class="Gallery-head">GALLERY</h1>
+
   <div class="fourth-container">
     <div class="gallery-img2">
       <img src="Gallery_1.webp" alt="img1">
     </div>
+
     <div class="gallery-right">
       <div class="gallery-img3">
         <img src="Gallery_2.webp" alt="img2">
