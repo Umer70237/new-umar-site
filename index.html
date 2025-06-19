@@ -243,13 +243,15 @@
     }
 /* images with paragraphs */
 
-
-.section {
+    .section {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: 60px;
+      justify-content: space-between;
+      gap: 100px; /* More space between image and text */
+      margin-bottom: 100px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
       flex-wrap: wrap;
     }
 
@@ -257,75 +259,101 @@
       flex-direction: row-reverse;
     }
 
-    .galllery-img1 img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .galllery-img11 img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .paragraph1 {
+    .image-container {
+      flex: 1;
       max-width: 500px;
     }
 
-    .paragraph1 h1 {
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .text-container {
+      flex: 1;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .text-container h1 {
       color: #679267;
-      font-size: 22px;
+      font-size: 30px;
       font-weight: bold;
-      margin-bottom: 16px;
     }
 
-    .paragraph1 p {
+    .text-container p {
       font-size: 20px;
-      color: rgba(0, 0, 0, 0.7);
+      color: rgba(0, 0, 0, 0.8);
+      line-height: 1.7;
     }
 
-    .paragraph1 button {
-      font-size: 18px;
-      padding: 10px 40px;
+    .text-container button {
+      align-self: center;
+      font-size: 20px;
+      padding: 14px 50px;
       background-color: #679267;
       color: white;
       border: none;
       border-radius: 50px;
-      margin-top: 20px;
+      margin-top: 10px;
       cursor: pointer;
+      transition: 0.3s;
     }
 
+    .text-container button:hover {
+      background-color: #4f7a4f;
+    }
+
+    /* Responsive Design */
     @media screen and (max-width: 768px) {
-
-     
-
-      .galllery-img1 img {
-        width: 100%;
-        max-width: 80%;
-      }
-      .gallery-img11 img{
-        width: 100%;
-        max-width: 90%;
-      }
-
       .section,
       .section-reverse {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 50px;
       }
 
-      .paragraph1 {
-        margin-top: 20px;
+      .image-container,
+      .text-container {
+        width: 90%;
+        max-width: 500px;
       }
 
-      
+      .text-container h1 {
+        font-size: 24px;
+      }
+
+      .text-container p {
+        font-size: 18px;
+      }
+
+      .text-container button {
+        font-size: 18px;
+        padding: 12px 40px;
+      }
     }
 
+    @media screen and (max-width: 480px) {
+      .text-container p {
+        font-size: 16px;
+      }
+
+      .text-container h1 {
+        font-size: 20px;
+      }
+
+      .text-container button {
+        font-size: 16px;
+        padding: 10px 30px;
+      }
+    }
 .Gallery-head {
       text-align: center;
       font-size: 36px;
@@ -460,28 +488,32 @@
   </div>
 
   <!-- Structure for Mobile: img > para > img > para -->
-  <div class="section">
-    <div class="galllery-img1">
+ <div class="section">
+    <div class="image-container">
       <img src="alpinism.webp" alt="climb">
     </div>
-    <div class="paragraph1">
+    <div class="text-container">
       <h1>ROCK CLIMBING</h1>
-      <p>Curabitur sit amet purus semper tortor tempor<br> lacinia eu in tortor.</p>
+      <p>
+        Curabitur sit amet purus semper tortor tempor lacinia eu in tortor. Integer nisl risus, condimentum sed lacinia in.
+      </p>
       <button>SIGN UP</button>
     </div>
   </div>
 
+  <!-- Section 2 -->
   <div class="section section-reverse">
-    <div class="galllery-img11">
+    <div class="image-container">
       <img src="offroad.webp" alt="offroad">
     </div>
-    <div class="paragraph1">
+    <div class="text-container">
       <h1>EXTREME OFFROAD</h1>
-      <p>Curabitur sit amet purus semper tortor tempor<br> lacinia eu in tortor.</p>
+      <p>
+        Curabitur sit amet purus semper tortor tempor lacinia eu in tortor. Integer nisl risus, condimentum sed lacinia in.
+      </p>
       <button>SIGN UP</button>
     </div>
   </div>
-
  <h1 class="Gallery-head">GALLERY</h1>
 
   <div class="fourth-container">
